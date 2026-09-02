@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Settings — PawAI</title><style>
+:root{--pink:#ff3f8e;--pink2:#ff75ac;--soft:#fff1f7;--ink:#17182b;--muted:#77798e;--card:#fff;--line:#f0dce6;--shadow:0 18px 45px rgba(255,63,142,.12)}
+*{box-sizing:border-box}html,body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:linear-gradient(135deg,#fff8fb,#ffeef6)}
+body{min-height:100vh}.wrap{max-width:1400px;margin:auto;padding:28px 5vw}.nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:36px}.logo{font-size:30px;font-weight:900;letter-spacing:-1.5px}.logo span{color:var(--pink)}.paw{color:var(--pink);font-size:28px}.btn{border:0;border-radius:14px;padding:14px 22px;font-weight:800;cursor:pointer;font-size:15px}.btn.primary{background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;box-shadow:0 10px 25px rgba(255,63,142,.22)}.btn.ghost{background:white;border:1px solid #ffc2da;color:var(--pink)}.card{background:rgba(255,255,255,.94);border:1px solid rgba(255,255,255,.9);border-radius:24px;box-shadow:var(--shadow)}input,select{width:100%;padding:15px 16px;border:1px solid var(--line);border-radius:13px;background:#fff;font-size:15px;outline:none}input:focus,select:focus{border-color:var(--pink);box-shadow:0 0 0 4px #ff3f8e14}label{display:block;font-size:13px;font-weight:800;margin:0 0 8px}.muted{color:var(--muted)}.pink{color:var(--pink)}.grid{display:grid;gap:20px}.two{grid-template-columns:1fr 1fr}.three{grid-template-columns:repeat(3,1fr)}.four{grid-template-columns:repeat(4,1fr)}.section-title{font-size:20px;margin:0 0 15px}.pill{display:inline-flex;align-items:center;gap:6px;padding:7px 11px;border-radius:999px;background:#fff0f6;color:var(--pink);font-size:12px;font-weight:800}.avatar{width:82px;height:82px;border-radius:50%;object-fit:cover;border:4px solid white;box-shadow:0 8px 20px #ff3f8e20}.bottom{display:flex;gap:8px;justify-content:center;padding:16px;margin-top:20px;background:white;border-radius:20px;box-shadow:0 12px 30px #ff3f8e12}.bottom a{padding:10px 18px;border-radius:12px;color:#777;text-decoration:none;font-weight:700}.bottom a.active{background:#fff0f6;color:var(--pink)}
+@media(max-width:900px){.two,.three,.four{grid-template-columns:1fr}.wrap{padding:20px}.nav{margin-bottom:22px}.hide-mobile{display:none!important}}
+</style></head>
+<body>
+<div class="wrap">
+  <div class="nav"><div><div class="logo">🐾 Paw<span>AI</span></div><div class="muted">Customize your app experience</div></div><a href="04-account.html" class="btn ghost">← Back</a></div>
+  <h1 style="font-size:42px;margin-bottom:22px">Settings</h1>
+  <div class="grid two">
+    <section class="card" style="padding:25px"><h2 class="section-title">🎨 Appearance</h2>
+      <div style="margin-bottom:18px"><label>Theme</label><select><option>Light</option><option>Dark</option><option>System</option></select></div>
+      <div style="margin-bottom:18px"><label>Font Size</label><select><option>Medium</option><option>Small</option><option>Large</option></select></div>
+      <div><label>UI Density</label><select><option>Comfortable</option><option>Compact</option></select></div>
+    </section>
+    <section class="card" style="padding:25px"><h2 class="section-title">♿ Accessibility</h2>
+      <p><b>Larger Text</b><label style="float:right"><input type="checkbox" checked style="width:auto"></label></p><hr style="border:0;border-top:1px solid var(--line)">
+      <p><b>High Contrast</b><label style="float:right"><input type="checkbox" style="width:auto"></label></p><hr style="border:0;border-top:1px solid var(--line)">
+      <p><b>Reduce Animations</b><label style="float:right"><input type="checkbox" style="width:auto"></label></p>
+    </section>
+    <section class="card" style="padding:25px"><h2 class="section-title">🔔 Notifications</h2>
+      <p><b>Analysis Complete</b><label style="float:right"><input type="checkbox" checked style="width:auto"></label></p><hr style="border:0;border-top:1px solid var(--line)">
+      <p><b>Chatbot Messages</b><label style="float:right"><input type="checkbox" checked style="width:auto"></label></p><hr style="border:0;border-top:1px solid var(--line)">
+      <p><b>General Updates</b><label style="float:right"><input type="checkbox" style="width:auto"></label></p>
+    </section>
+    <section class="card" style="padding:25px"><h2 class="section-title">🔒 Privacy & Security</h2>
+      <p><b>Save Analysis History</b><label style="float:right"><input type="checkbox" checked style="width:auto"></label></p><hr style="border:0;border-top:1px solid var(--line)">
+      <p><b>Clear Uploaded Media</b><button class="btn ghost" style="float:right;padding:7px 12px" data-action="Uploaded media cleared.">Clear</button></p><hr style="border:0;border-top:1px solid var(--line)">
+      <p><b>Change Password</b><button class="btn ghost" style="float:right;padding:7px 12px">Open</button></p>
+    </section>
+  </div>
+  <section class="card" style="padding:25px;margin-top:20px"><h2 class="section-title">ℹ️ About</h2><div class="grid three"><div><b>App Version</b><div class="muted">1.0.0</div></div><div><b>Privacy Policy</b><div class="muted">View policy</div></div><div><b>Help & Support</b><div class="muted">Contact support</div></div></div></section>
+  <div class="bottom"><a href="03-home.html">🏠 Home</a><a href="04-account.html">📜 History</a><a href="06-chatbot.html">💬 PawBot</a><a class="active" href="05-settings.html">⚙️ Settings</a></div>
+</div>
+
+<script>
+document.querySelectorAll('[data-action]').forEach(b=>b.addEventListener('click',()=>alert(b.dataset.action)));
+</script>
+</body></html>

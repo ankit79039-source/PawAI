@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Create Account — PawAI</title><style>
+:root{--pink:#ff3f8e;--pink2:#ff75ac;--soft:#fff1f7;--ink:#17182b;--muted:#77798e;--card:#fff;--line:#f0dce6;--shadow:0 18px 45px rgba(255,63,142,.12)}
+*{box-sizing:border-box}html,body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:linear-gradient(135deg,#fff8fb,#ffeef6)}
+body{min-height:100vh}.wrap{max-width:1400px;margin:auto;padding:28px 5vw}.nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:36px}.logo{font-size:30px;font-weight:900;letter-spacing:-1.5px}.logo span{color:var(--pink)}.paw{color:var(--pink);font-size:28px}.btn{border:0;border-radius:14px;padding:14px 22px;font-weight:800;cursor:pointer;font-size:15px}.btn.primary{background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;box-shadow:0 10px 25px rgba(255,63,142,.22)}.btn.ghost{background:white;border:1px solid #ffc2da;color:var(--pink)}.card{background:rgba(255,255,255,.94);border:1px solid rgba(255,255,255,.9);border-radius:24px;box-shadow:var(--shadow)}input,select{width:100%;padding:15px 16px;border:1px solid var(--line);border-radius:13px;background:#fff;font-size:15px;outline:none}input:focus,select:focus{border-color:var(--pink);box-shadow:0 0 0 4px #ff3f8e14}label{display:block;font-size:13px;font-weight:800;margin:0 0 8px}.muted{color:var(--muted)}.pink{color:var(--pink)}.grid{display:grid;gap:20px}.two{grid-template-columns:1fr 1fr}.three{grid-template-columns:repeat(3,1fr)}.four{grid-template-columns:repeat(4,1fr)}.section-title{font-size:20px;margin:0 0 15px}.pill{display:inline-flex;align-items:center;gap:6px;padding:7px 11px;border-radius:999px;background:#fff0f6;color:var(--pink);font-size:12px;font-weight:800}.avatar{width:82px;height:82px;border-radius:50%;object-fit:cover;border:4px solid white;box-shadow:0 8px 20px #ff3f8e20}.bottom{display:flex;gap:8px;justify-content:center;padding:16px;margin-top:20px;background:white;border-radius:20px;box-shadow:0 12px 30px #ff3f8e12}.bottom a{padding:10px 18px;border-radius:12px;color:#777;text-decoration:none;font-weight:700}.bottom a.active{background:#fff0f6;color:var(--pink)}
+@media(max-width:900px){.two,.three,.four{grid-template-columns:1fr}.wrap{padding:20px}.nav{margin-bottom:22px}.hide-mobile{display:none!important}}
+</style></head>
+<body>
+<div class="wrap">
+  <div class="nav"><div class="logo">🐾 Paw<span>AI</span></div><a href="02-login.html" class="btn ghost">Login</a></div>
+  <div class="grid two" style="align-items:center">
+    <section style="padding:30px">
+      <span class="pill">🐾 Pet-first AI</span>
+      <h1 style="font-size:54px;line-height:1.05;margin:18px 0">Create your<br><span class="pink">PawAI account.</span></h1>
+      <p class="muted" style="font-size:18px;max-width:520px">Understand your pet better with AI-powered behavior analysis, history and a personal pet assistant.</p>
+      <div class="card" style="padding:22px;margin-top:28px;max-width:520px">
+        <div style="display:flex;gap:14px;align-items:center"><div style="font-size:35px">🧠</div><div><b>AI-powered insights</b><div class="muted">Analyze video, audio and images.</div></div></div>
+        <hr style="border:0;border-top:1px solid var(--line);margin:18px 0">
+        <div style="display:flex;gap:14px;align-items:center"><div style="font-size:35px">💬</div><div><b>PawBot assistant</b><div class="muted">Ask questions about your pet anytime.</div></div></div>
+      </div>
+    </section>
+    <section class="card" style="padding:34px">
+      <div style="text-align:center"><div style="font-size:46px">🐾</div><h2 style="font-size:30px;margin:8px 0">Create Account</h2><p class="muted">Let's create your pet's profile</p></div>
+      <div style="display:flex;justify-content:center;margin:18px 0 24px"><div style="position:relative"><img class="avatar" style="width:120px;height:120px" src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=300&q=80"><button class="btn ghost" style="position:absolute;right:-8px;bottom:-8px;padding:10px">📷</button></div></div>
+      <div class="grid two">
+        <div><label>Pet Name</label><input placeholder="e.g. Bruno"></div>
+        <div><label>Breed</label><input placeholder="e.g. Persian"></div>
+        <div><label>Age</label><input placeholder="2 years"></div>
+        <div><label>Gender</label><select><option>Male</option><option>Female</option><option>Other</option></select></div>
+        <div><label>Email Address</label><input type="email" placeholder="you@example.com"></div>
+        <div><label>Create User ID</label><input placeholder="bruno_love"></div>
+        <div><label>Password</label><input type="password" placeholder="Create password"></div>
+        <div><label>Confirm Password</label><input type="password" placeholder="Confirm password"></div>
+      </div>
+      <label style="display:flex;gap:9px;margin:20px 0;align-items:center;font-weight:600"><input type="checkbox" style="width:auto"> I agree to the Terms & Privacy Policy</label>
+      <button class="btn primary" style="width:100%" data-action="Account created! Connect this button to your backend.">🐾 Create Account</button>
+      <p style="text-align:center" class="muted">Already have an account? <a class="pink" href="02-login.html"><b>Login</b></a></p>
+    </section>
+  </div>
+</div>
+
+<script>
+document.querySelectorAll('[data-action]').forEach(b=>b.addEventListener('click',()=>alert(b.dataset.action)));
+</script>
+</body></html>
