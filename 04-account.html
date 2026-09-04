@@ -340,6 +340,74 @@
     .care-status{display:none;}
     .toast{right:14px;bottom:78px;left:14px;max-width:none;}
   }
+
+  .logo-mark {
+    animation: logoPulse 3.8s ease-in-out infinite;
+    transition: transform .22s ease, filter .22s ease;
+  }
+
+  .logo:hover .logo-mark {
+    transform: rotate(-6deg) scale(1.08);
+    filter: drop-shadow(0 0 14px rgba(255, 63, 142, .7));
+  }
+
+  .card,
+  .action-pill,
+  .history-item,
+  .analysis-row {
+    animation: riseIn .72s ease both;
+  }
+
+  .card,
+  .action-pill,
+  .history-item,
+  .analysis-row,
+  .nav-item {
+    transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease, background .2s ease;
+  }
+
+  .card:hover,
+  .action-pill:hover,
+  .history-item:hover,
+  .analysis-row:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 63, 142, .45);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, .5);
+  }
+
+  @keyframes riseIn {
+    from {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes logoPulse {
+    0%,
+    100% {
+      box-shadow: 0 4px 15px rgba(255, 63, 142, 0.3);
+    }
+
+    50% {
+      box-shadow: 0 18px 54px rgba(255, 63, 142, .48), 0 0 0 8px rgba(255, 63, 142, .08);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: .01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: .01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
 </style>
 </head>
 <body>
@@ -348,10 +416,10 @@
 
   <!-- ================= SIDEBAR ================= -->
   <aside class="sidebar">
-    <div class="logo">
+    <a class="logo" href="index.html" aria-label="PawAI landing page">
       <div class="logo-mark"><i class="fa-solid fa-paw"></i></div>
       <div class="logo-text">Paw<span>AI</span></div>
-    </div>
+    </a>
 
     <nav class="nav-group">
       <a class="nav-item" href="03-home.html"><i class="fa-solid fa-house"></i>Home</a>
@@ -408,7 +476,7 @@
 
           <div class="hero-photo">
             <div class="photo-frame" id="petFrame">
-              <img id="petImg" src="../Picsart_26-09-01_02-19-21-672.png" alt="Whiskers the cat">
+              <img id="petImg" src="assets/home-cat-heart.jpg" alt="Whiskers relaxing with a red heart toy">
             </div>
             <div class="float-card">
               <div class="avatar-sm"><i class="fa-solid fa-cat"></i></div>
