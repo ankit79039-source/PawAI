@@ -1,29 +1,728 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>PawBot — PawAI</title><style>
-:root{--pink:#ff3f8e;--pink2:#ff75ac;--soft:#fff1f7;--ink:#17182b;--muted:#77798e;--card:#fff;--line:#f0dce6;--shadow:0 18px 45px rgba(255,63,142,.12)}
-*{box-sizing:border-box}html,body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:linear-gradient(135deg,#fff8fb,#ffeef6)}
-body{min-height:100vh}.wrap{max-width:1400px;margin:auto;padding:28px 5vw}.nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:36px}.logo{font-size:30px;font-weight:900;letter-spacing:-1.5px}.logo span{color:var(--pink)}.paw{color:var(--pink);font-size:28px}.btn{border:0;border-radius:14px;padding:14px 22px;font-weight:800;cursor:pointer;font-size:15px}.btn.primary{background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;box-shadow:0 10px 25px rgba(255,63,142,.22)}.btn.ghost{background:white;border:1px solid #ffc2da;color:var(--pink)}.card{background:rgba(255,255,255,.94);border:1px solid rgba(255,255,255,.9);border-radius:24px;box-shadow:var(--shadow)}input,select{width:100%;padding:15px 16px;border:1px solid var(--line);border-radius:13px;background:#fff;font-size:15px;outline:none}input:focus,select:focus{border-color:var(--pink);box-shadow:0 0 0 4px #ff3f8e14}label{display:block;font-size:13px;font-weight:800;margin:0 0 8px}.muted{color:var(--muted)}.pink{color:var(--pink)}.grid{display:grid;gap:20px}.two{grid-template-columns:1fr 1fr}.three{grid-template-columns:repeat(3,1fr)}.four{grid-template-columns:repeat(4,1fr)}.section-title{font-size:20px;margin:0 0 15px}.pill{display:inline-flex;align-items:center;gap:6px;padding:7px 11px;border-radius:999px;background:#fff0f6;color:var(--pink);font-size:12px;font-weight:800}.avatar{width:82px;height:82px;border-radius:50%;object-fit:cover;border:4px solid white;box-shadow:0 8px 20px #ff3f8e20}.bottom{display:flex;gap:8px;justify-content:center;padding:16px;margin-top:20px;background:white;border-radius:20px;box-shadow:0 12px 30px #ff3f8e12}.bottom a{padding:10px 18px;border-radius:12px;color:#777;text-decoration:none;font-weight:700}.bottom a.active{background:#fff0f6;color:var(--pink)}
-@media(max-width:900px){.two,.three,.four{grid-template-columns:1fr}.wrap{padding:20px}.nav{margin-bottom:22px}.hide-mobile{display:none!important}}
-</style></head>
-<body>
-<div class="wrap">
-  <div class="nav"><div><div class="logo">🐾 Paw<span>AI</span></div><div class="muted">Your Pet. Our AI. Better Care.</div></div><span class="pill">● Online</span></div>
-  <section class="card" style="max-width:1000px;margin:auto;overflow:hidden">
-    <div style="padding:22px 26px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:15px"><img class="avatar" style="width:58px;height:58px" src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=100&q=80"><div><h2 style="margin:0">PawBot</h2><div class="muted">Talking about <b>Whiskers</b> · Persian · 2 Years</div></div><button class="btn ghost" style="margin-left:auto">Change Pet</button></div>
-    <div style="padding:28px;min-height:470px;background:linear-gradient(#fff,#fff7fb)">
-      <div style="text-align:center"><span class="pill">Today</span></div>
-      <div style="display:flex;justify-content:flex-end;margin:22px 0"><div style="background:linear-gradient(135deg,var(--pink),var(--pink2));color:#fff;padding:16px 20px;border-radius:20px 20px 5px 20px;max-width:65%">Whiskers has been meowing continuously since morning. What could be the reason?<small style="display:block;opacity:.75;text-align:right;margin-top:6px">10:30 AM ✓✓</small></div></div>
-      <div style="display:flex;gap:10px;margin:22px 0"><div class="pill" style="height:40px">🐾</div><div style="background:#fff;border:1px solid var(--line);padding:18px 20px;border-radius:5px 20px 20px 20px;max-width:70%;box-shadow:0 8px 20px #ff3f8e0d">Continuous meowing can have several causes, such as hunger, stress, attention-seeking, boredom, or discomfort. Check food, water, environment and whether there are signs of pain. <div style="text-align:right;margin-top:8px"><button class="btn ghost" style="padding:6px 10px">🔊</button></div></div></div>
-      <div style="display:flex;justify-content:flex-end;margin:22px 0"><div style="background:linear-gradient(135deg,var(--pink),var(--pink2));color:#fff;padding:16px 20px;border-radius:20px 20px 5px 20px;max-width:55%">She already ate. But there were some loud noises outside.</div></div>
-      <div style="display:flex;gap:10px;margin:22px 0"><div class="pill" style="height:40px">🐾</div><div style="background:#fff;border:1px solid var(--line);padding:18px 20px;border-radius:5px 20px 20px 20px;max-width:70%">Loud noises can stress cats. Try giving her a quiet, safe space with her favorite blanket or toy. If unusual behavior continues, consider consulting a vet.</div></div>
-    </div>
-    <div style="padding:16px 22px;border-top:1px solid var(--line)"><div style="display:flex;gap:8px;overflow:auto;margin-bottom:12px"><button class="btn ghost">Why is my pet doing this?</button><button class="btn ghost">Food suggestions</button><button class="btn ghost">Is this normal?</button><button class="btn ghost">When should I see a vet?</button></div><div style="display:flex;gap:10px"><button class="btn ghost">📎</button><input placeholder="Ask anything about your pet..."><button class="btn primary">➤</button></div></div>
-  </section>
-  <div class="bottom"><a href="03-home.html">🏠 Home</a><a href="04-account.html">📜 History</a><a class="active" href="06-chatbot.html">💬 PawBot</a><a href="05-settings.html">⚙️ Account</a></div>
-</div>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PawBot - PawAI</title>
+  <style>
+    :root {
+      --bg: #090a10;
+      --panel: #141218;
+      --panel-soft: #1c1621;
+      --field: #100f15;
+      --line: #2d2833;
+      --line-strong: #453545;
+      --text: #f8f5fa;
+      --muted: #9c96aa;
+      --pink: #ff3d91;
+      --pink-soft: #ff5aa4;
+      --green: #2ee98f;
+      --danger: #ff6f91;
+      --shadow: 0 24px 70px rgba(0, 0, 0, .45);
+      --pink-glow: 0 18px 42px rgba(255, 61, 145, .28);
+      --font: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
 
-<script>
-document.querySelectorAll('[data-action]').forEach(b=>b.addEventListener('click',()=>alert(b.dataset.action)));
-</script>
-</body></html>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 78% 8%, rgba(255, 61, 145, .18), transparent 34rem),
+        radial-gradient(circle at 12% 90%, rgba(46, 233, 143, .09), transparent 26rem),
+        linear-gradient(135deg, #08090f 0%, #121018 58%, #08090f 100%);
+      font-family: var(--font);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    button {
+      border: 0;
+      cursor: pointer;
+    }
+
+    .page {
+      width: min(1180px, calc(100% - 40px));
+      min-height: 100vh;
+      margin: 0 auto;
+      padding: 28px 0 40px;
+    }
+
+    .navbar,
+    .brand,
+    .chat-header,
+    .pet-card,
+    .composer,
+    .bottom-nav,
+    .tools {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar {
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+
+    .brand {
+      gap: 12px;
+      font-size: 24px;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    .brand-icon {
+      display: grid;
+      place-items: center;
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      color: #fff;
+      background: linear-gradient(135deg, var(--pink), var(--pink-soft));
+      box-shadow: var(--pink-glow);
+    }
+
+    .brand-icon svg {
+      width: 24px;
+      height: 24px;
+      fill: #fff;
+    }
+
+    .brand .brand-accent,
+    .nav-link.active,
+    .accent {
+      color: var(--pink);
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .ghost-btn,
+    .icon-btn,
+    .send-btn,
+    .quick-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      border-radius: 14px;
+      font-weight: 850;
+    }
+
+    .ghost-btn,
+    .icon-btn,
+    .quick-btn {
+      border: 1px solid rgba(255, 61, 145, .38);
+      color: var(--pink);
+      background: rgba(255, 61, 145, .1);
+    }
+
+    .ghost-btn {
+      padding: 0 20px;
+    }
+
+    .icon-btn {
+      width: 46px;
+      flex: 0 0 auto;
+    }
+
+    .icon-btn.is-listening {
+      color: #fff;
+      background: linear-gradient(135deg, var(--pink), var(--pink-soft));
+      box-shadow: var(--pink-glow);
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, .72fr) minmax(360px, 1.28fr);
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .side-panel,
+    .chat-shell {
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background:
+        radial-gradient(circle at 80% 0%, rgba(255, 61, 145, .12), transparent 23rem),
+        rgba(20, 18, 24, .92);
+      box-shadow: var(--shadow);
+    }
+
+    .side-panel {
+      padding: 24px;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      margin-bottom: 8px;
+      font-size: clamp(34px, 5vw, 48px);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .panel-copy {
+      margin-bottom: 22px;
+      line-height: 1.6;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 0 14px;
+      border: 1px solid rgba(255, 61, 145, .35);
+      border-radius: 999px;
+      color: var(--pink);
+      background: rgba(255, 61, 145, .11);
+      font-size: 13px;
+      font-weight: 850;
+    }
+
+    .pet-card {
+      gap: 14px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, .03);
+      margin-bottom: 18px;
+    }
+
+    .avatar {
+      width: 62px;
+      height: 62px;
+      border: 3px solid rgba(255, 255, 255, .75);
+      border-radius: 50%;
+      object-fit: cover;
+      background: var(--panel-soft);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, .28);
+    }
+
+    .pet-card strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 18px;
+    }
+
+    .quick-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .quick-btn {
+      justify-content: flex-start;
+      min-height: 48px;
+      padding: 0 14px;
+      text-align: left;
+    }
+
+    .chat-shell {
+      display: grid;
+      min-height: 690px;
+      overflow: hidden;
+      grid-template-rows: auto 1fr auto;
+    }
+
+    .chat-header {
+      justify-content: space-between;
+      gap: 16px;
+      padding: 22px 24px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(9, 10, 16, .42);
+    }
+
+    .chat-title h2 {
+      margin-bottom: 4px;
+      font-size: 24px;
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 750;
+    }
+
+    .status-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 0 4px rgba(46, 233, 143, .1);
+    }
+
+    .messages {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      min-height: 0;
+      padding: 24px;
+      overflow-y: auto;
+      scroll-behavior: smooth;
+    }
+
+    .message {
+      display: flex;
+      gap: 10px;
+      max-width: 82%;
+    }
+
+    .message.user {
+      align-self: flex-end;
+      justify-content: flex-end;
+    }
+
+    .message.bot {
+      align-self: flex-start;
+    }
+
+    .bubble {
+      padding: 14px 16px;
+      border-radius: 18px;
+      line-height: 1.55;
+      font-size: 15px;
+    }
+
+    .message.user .bubble {
+      border-bottom-right-radius: 6px;
+      color: #fff;
+      background: linear-gradient(135deg, var(--pink), var(--pink-soft));
+      box-shadow: var(--pink-glow);
+    }
+
+    .message.bot .bubble {
+      border: 1px solid var(--line);
+      border-bottom-left-radius: 6px;
+      color: var(--text);
+      background: rgba(255, 255, 255, .04);
+    }
+
+    .bot-mark {
+      display: grid;
+      width: 36px;
+      height: 36px;
+      border-radius: 12px;
+      place-items: center;
+      flex: 0 0 auto;
+      color: #fff;
+      background: linear-gradient(135deg, var(--pink), var(--pink-soft));
+    }
+
+    .bot-mark svg {
+      width: 20px;
+      height: 20px;
+      fill: #fff;
+    }
+
+    .bubble-meta {
+      display: block;
+      margin-top: 8px;
+      color: rgba(255, 255, 255, .65);
+      font-size: 12px;
+    }
+
+    .message.bot .bubble-meta {
+      color: var(--muted);
+    }
+
+    .composer-area {
+      padding: 18px 22px 22px;
+      border-top: 1px solid var(--line);
+      background: rgba(9, 10, 16, .42);
+    }
+
+    .suggestions {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 14px;
+      overflow-x: auto;
+      padding-bottom: 2px;
+    }
+
+    .composer {
+      gap: 10px;
+    }
+
+    .chat-input {
+      width: 100%;
+      min-height: 50px;
+      padding: 0 16px;
+      border: 1px solid var(--line-strong);
+      border-radius: 14px;
+      outline: none;
+      color: var(--text);
+      background: var(--field);
+    }
+
+    .chat-input::placeholder {
+      color: #6f6878;
+    }
+
+    .chat-input:focus {
+      border-color: var(--pink);
+      background: #131018;
+      box-shadow: 0 0 0 4px rgba(255, 61, 145, .14);
+    }
+
+    .send-btn {
+      width: 52px;
+      min-height: 50px;
+      flex: 0 0 auto;
+      color: #fff;
+      background: linear-gradient(135deg, var(--pink), var(--pink-soft));
+      box-shadow: var(--pink-glow);
+      font-size: 18px;
+    }
+
+    .bottom-nav {
+      justify-content: center;
+      gap: 8px;
+      margin-top: 22px;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: rgba(20, 18, 24, .92);
+      box-shadow: var(--shadow);
+    }
+
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      min-height: 42px;
+      padding: 0 16px;
+      border-radius: 12px;
+      color: var(--muted);
+      font-weight: 800;
+    }
+
+    .nav-link.active {
+      background: rgba(255, 61, 145, .11);
+    }
+
+    @media (max-width: 900px) {
+      .page {
+        width: min(100% - 28px, 680px);
+      }
+
+      .navbar {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .chat-shell {
+        min-height: 620px;
+      }
+
+      .message {
+        max-width: 96%;
+      }
+
+      .bottom-nav {
+        flex-wrap: wrap;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .brand {
+        font-size: 21px;
+      }
+
+      .ghost-btn {
+        min-height: 42px;
+        padding: 0 14px;
+      }
+
+      .chat-header,
+      .composer {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .tools {
+        justify-content: flex-end;
+      }
+
+      .icon-btn,
+      .send-btn {
+        width: 100%;
+      }
+
+      .side-panel,
+      .chat-shell {
+        border-radius: 20px;
+      }
+
+      .nav-link {
+        flex: 1 1 44%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="navbar">
+      <a class="brand" href="03-home.html" aria-label="PawAI home">
+        <span class="brand-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" focusable="false">
+            <path d="M8.1 10.4c-1.4.2-2.6-1.1-2.8-2.9C5.1 5.7 6 4.1 7.3 3.9c1.4-.2 2.6 1.1 2.8 2.9.2 1.8-.7 3.4-2 3.6Zm7.8 0c-1.3-.2-2.2-1.8-2-3.6.2-1.8 1.4-3.1 2.8-2.9 1.3.2 2.2 1.8 2 3.6-.2 1.8-1.4 3.1-2.8 2.9ZM4.4 14.2c-1.1.4-2.4-.4-2.9-1.8-.5-1.4-.1-2.8 1-3.2 1.1-.4 2.4.4 2.9 1.8.5 1.4.1 2.8-1 3.2Zm15.2 0c-1.1-.4-1.5-1.8-1-3.2.5-1.4 1.8-2.2 2.9-1.8 1.1.4 1.5 1.8 1 3.2-.5 1.4-1.8 2.2-2.9 1.8Zm-7.6 6.2c-3.5 0-6.4-1.3-6.4-3.8 0-1.5 1.2-2.2 2.2-3 .8-.6 1.4-1.3 2.1-2.2.6-.8 1.2-1.3 2.1-1.3s1.5.5 2.1 1.3c.7.9 1.3 1.6 2.1 2.2 1 .8 2.2 1.5 2.2 3 0 2.5-2.9 3.8-6.4 3.8Z"/>
+          </svg>
+        </span>
+        Paw<span class="brand-accent">AI</span>
+      </a>
+
+      <div class="tools">
+        <span class="pill"><span class="status-dot"></span> PawBot online</span>
+        <a class="ghost-btn" href="02-login.html">Logout</a>
+      </div>
+    </header>
+
+    <main class="layout">
+      <aside class="side-panel" aria-labelledby="panelTitle">
+        <span class="pill">AI pet assistant</span>
+        <h1 id="panelTitle">Ask <span class="accent">PawBot</span></h1>
+        <p class="muted panel-copy">Talk or type about Whiskers. PawBot can explain behavior, food concerns, moods, and when it may be time to contact a vet.</p>
+
+        <section class="pet-card" aria-label="Current pet">
+          <img
+            class="avatar"
+            src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=120&q=80"
+            alt="Whiskers profile"
+          >
+          <div>
+            <strong>Whiskers</strong>
+            <p class="muted">Persian, 2 years, female</p>
+          </div>
+        </section>
+
+        <div class="quick-list" aria-label="Quick questions">
+          <button class="quick-btn" type="button" data-prompt="Why is my pet meowing continuously?">Why is my pet meowing?</button>
+          <button class="quick-btn" type="button" data-prompt="What food is best for my Persian cat?">Food suggestion</button>
+          <button class="quick-btn" type="button" data-prompt="Is this behavior normal for my cat?">Is this normal?</button>
+          <button class="quick-btn" type="button" data-prompt="When should I contact a vet?">When should I see a vet?</button>
+        </div>
+      </aside>
+
+      <section class="chat-shell" aria-labelledby="chatTitle">
+        <header class="chat-header">
+          <div class="chat-title">
+            <h2 id="chatTitle">PawBot Chat</h2>
+            <span class="status"><span class="status-dot"></span> Voice and text ready</span>
+          </div>
+          <button class="icon-btn" id="speakLastButton" type="button" aria-label="Speak last PawBot reply">Play</button>
+        </header>
+
+        <div class="messages" id="messages" aria-live="polite">
+          <article class="message bot">
+            <span class="bot-mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false">
+                <path d="M8.1 10.4c-1.4.2-2.6-1.1-2.8-2.9C5.1 5.7 6 4.1 7.3 3.9c1.4-.2 2.6 1.1 2.8 2.9.2 1.8-.7 3.4-2 3.6Zm7.8 0c-1.3-.2-2.2-1.8-2-3.6.2-1.8 1.4-3.1 2.8-2.9 1.3.2 2.2 1.8 2 3.6-.2 1.8-1.4 3.1-2.8 2.9ZM4.4 14.2c-1.1.4-2.4-.4-2.9-1.8-.5-1.4-.1-2.8 1-3.2 1.1-.4 2.4.4 2.9 1.8.5 1.4.1 2.8-1 3.2Zm15.2 0c-1.1-.4-1.5-1.8-1-3.2.5-1.4 1.8-2.2 2.9-1.8 1.1.4 1.5 1.8 1 3.2-.5 1.4-1.8 2.2-2.9 1.8Zm-7.6 6.2c-3.5 0-6.4-1.3-6.4-3.8 0-1.5 1.2-2.2 2.2-3 .8-.6 1.4-1.3 2.1-2.2.6-.8 1.2-1.3 2.1-1.3s1.5.5 2.1 1.3c.7.9 1.3 1.6 2.1 2.2 1 .8 2.2 1.5 2.2 3 0 2.5-2.9 3.8-6.4 3.8Z"/>
+              </svg>
+            </span>
+            <div class="bubble">
+              Hi, I am PawBot. Tell me what Whiskers is doing, or use the mic button and speak your question.
+              <span class="bubble-meta">Just now</span>
+            </div>
+          </article>
+        </div>
+
+        <form class="composer-area" id="chatForm">
+          <div class="suggestions" aria-label="Suggested prompts">
+            <button class="quick-btn" type="button" data-prompt="Whiskers is hiding under the bed. What does it mean?">Hiding</button>
+            <button class="quick-btn" type="button" data-prompt="Whiskers is purring and blinking slowly. Is she happy?">Purring</button>
+            <button class="quick-btn" type="button" data-prompt="Whiskers is not eating today. What should I check first?">Not eating</button>
+          </div>
+
+          <div class="composer">
+            <button class="icon-btn" id="voiceButton" type="button" aria-label="Start voice input">Mic</button>
+            <input class="chat-input" id="chatInput" type="text" placeholder="Ask anything about your pet..." autocomplete="off">
+            <button class="send-btn" type="submit" aria-label="Send message">Send</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Primary navigation">
+      <a class="nav-link" href="03-home.html">Home</a>
+      <a class="nav-link" href="04-account.html">History</a>
+      <a class="nav-link active" href="06-chatbot.html">PawBot</a>
+      <a class="nav-link" href="05-settings.html">Settings</a>
+    </nav>
+  </div>
+
+  <script>
+    const chatForm = document.querySelector("#chatForm");
+    const chatInput = document.querySelector("#chatInput");
+    const messages = document.querySelector("#messages");
+    const voiceButton = document.querySelector("#voiceButton");
+    const speakLastButton = document.querySelector("#speakLastButton");
+    const quickButtons = document.querySelectorAll("[data-prompt]");
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    let recognition;
+    let lastBotReply = "";
+
+    function getTime() {
+      return new Date().toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
+    }
+
+    function pawSvg() {
+      return `
+        <span class="bot-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" focusable="false">
+            <path d="M8.1 10.4c-1.4.2-2.6-1.1-2.8-2.9C5.1 5.7 6 4.1 7.3 3.9c1.4-.2 2.6 1.1 2.8 2.9.2 1.8-.7 3.4-2 3.6Zm7.8 0c-1.3-.2-2.2-1.8-2-3.6.2-1.8 1.4-3.1 2.8-2.9 1.3.2 2.2 1.8 2 3.6-.2 1.8-1.4 3.1-2.8 2.9ZM4.4 14.2c-1.1.4-2.4-.4-2.9-1.8-.5-1.4-.1-2.8 1-3.2 1.1-.4 2.4.4 2.9 1.8.5 1.4.1 2.8-1 3.2Zm15.2 0c-1.1-.4-1.5-1.8-1-3.2.5-1.4 1.8-2.2 2.9-1.8 1.1.4 1.5 1.8 1 3.2-.5 1.4-1.8 2.2-2.9 1.8Zm-7.6 6.2c-3.5 0-6.4-1.3-6.4-3.8 0-1.5 1.2-2.2 2.2-3 .8-.6 1.4-1.3 2.1-2.2.6-.8 1.2-1.3 2.1-1.3s1.5.5 2.1 1.3c.7.9 1.3 1.6 2.1 2.2 1 .8 2.2 1.5 2.2 3 0 2.5-2.9 3.8-6.4 3.8Z"/>
+          </svg>
+        </span>
+      `;
+    }
+
+    function addMessage(type, text) {
+      const article = document.createElement("article");
+      article.className = `message ${type}`;
+
+      const bubble = document.createElement("div");
+      bubble.className = "bubble";
+      bubble.textContent = text;
+
+      const meta = document.createElement("span");
+      meta.className = "bubble-meta";
+      meta.textContent = getTime();
+      bubble.appendChild(meta);
+
+      if (type === "bot") {
+        article.innerHTML = pawSvg();
+      }
+
+      article.appendChild(bubble);
+      messages.appendChild(article);
+      messages.scrollTop = messages.scrollHeight;
+    }
+
+    function buildReply(question) {
+      const text = question.toLowerCase();
+
+      if (text.includes("not eating") || text.includes("food")) {
+        return "Check water, recent diet changes, stress, and whether Whiskers has vomiting or low energy. If she refuses food for 24 hours, contact a vet.";
+      }
+
+      if (text.includes("meow") || text.includes("loud")) {
+        return "Continuous meowing can mean attention-seeking, hunger, stress, boredom, or discomfort. Since loud noises can upset cats, give her a quiet space and watch for pain signs.";
+      }
+
+      if (text.includes("hiding")) {
+        return "Hiding often means Whiskers wants safety or quiet. Make a calm space with water nearby, then check whether she is eating, moving normally, and using the litter box.";
+      }
+
+      if (text.includes("purring") || text.includes("blink")) {
+        return "Soft purring with slow blinking is usually a relaxed, trusting signal. If her posture is loose and appetite is normal, she is likely comfortable.";
+      }
+
+      if (text.includes("vet")) {
+        return "Call a vet if you notice breathing trouble, repeated vomiting, no food for a day, injury, severe weakness, crying in pain, or sudden unusual behavior.";
+      }
+
+      return "I can help translate Whiskers's cues. Tell me what she is doing, when it started, and whether food, water, energy, or litter habits changed.";
+    }
+
+    function speak(text) {
+      if (!("speechSynthesis" in window)) return;
+
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.rate = 0.95;
+      utterance.pitch = 1.05;
+      window.speechSynthesis.speak(utterance);
+    }
+
+    function sendQuestion(question) {
+      const trimmed = question.trim();
+      if (!trimmed) return;
+
+      addMessage("user", trimmed);
+      chatInput.value = "";
+
+      window.setTimeout(() => {
+        lastBotReply = buildReply(trimmed);
+        addMessage("bot", lastBotReply);
+        speak(lastBotReply);
+      }, 450);
+    }
+
+    chatForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      sendQuestion(chatInput.value);
+    });
+
+    quickButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        sendQuestion(button.dataset.prompt);
+      });
+    });
+
+    speakLastButton.addEventListener("click", () => {
+      speak(lastBotReply || "Hi, I am PawBot. Tell me what Whiskers is doing, or use the mic button and speak your question.");
+    });
+
+    if (SpeechRecognition) {
+      recognition = new SpeechRecognition();
+      recognition.lang = "en-US";
+      recognition.interimResults = false;
+
+      recognition.addEventListener("start", () => {
+        voiceButton.classList.add("is-listening");
+        voiceButton.textContent = "Stop";
+      });
+
+      recognition.addEventListener("end", () => {
+        voiceButton.classList.remove("is-listening");
+        voiceButton.textContent = "Mic";
+      });
+
+      recognition.addEventListener("result", (event) => {
+        const transcript = event.results[0][0].transcript;
+        chatInput.value = transcript;
+        sendQuestion(transcript);
+      });
+
+      voiceButton.addEventListener("click", () => {
+        if (voiceButton.classList.contains("is-listening")) {
+          recognition.stop();
+          return;
+        }
+
+        recognition.start();
+      });
+    } else {
+      voiceButton.addEventListener("click", () => {
+        addMessage("bot", "Voice input is not supported in this browser. You can still type your question.");
+      });
+    }
+  </script>
+</body>
+</html>
